@@ -61,7 +61,7 @@ There are many observations in your day to day life that would tell you why this
 #### 3. **Install the MQTT broker** refer **[Steps](https://randomnerdtutorials.com/how-to-install-mosquitto-broker-on-raspberry-pi/)** - On PI
 
 ### ESP 32 FW Steps : 
-> #### The steps is same as Digital switch repo, please refer that steps [Here](https://github.com/vyomchanpura/Digital_Switch/blob/main/Bring_up_Doc/Digital_Switch_ESP32_FW_bringup.md#digital-switch---esp32-firmware), just take the source code for this project from [here]().
+> #### The steps is same as Digital switch repo, please refer that steps [Here](https://github.com/vyomchanpura/Digital_Switch/blob/main/Bring_up_Doc/Digital_Switch_ESP32_FW_bringup.md#digital-switch---esp32-firmware), just take the source code for this project from [here](/Firmware/).
 
 ### Node-Red Setup on PI 
 #### 1. Install the Node-Red in PI as mentioned in Pre-requist steps

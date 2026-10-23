@@ -4,12 +4,12 @@
 #include "../lib/Pubsubclient/PubSubClient.h"
 
 // put function declarations here:
-const char* ssid = "Aryomtech";
-const char* password = "2910@Vibhuti";
+const char* ssid = "SSID";
+const char* password = "PASSWORD";
 const char *topic_US_Sensor="esp32/waterlevel";
 const char *topic_connection_sub="esp32/waterconnection";
 const char *payload_connection="Connected";
-const char* mqtt_server = "192.168.29.198";
+const char* mqtt_server = "MQTT_BROKER_IP_ADDRESS";
 int counter_alert=0;
 int flag_alert=0;
 char *payload_US_Sensor;
