@@ -35,7 +35,7 @@ There are many observations in your day to day life that would tell you why this
 
 ### Architecture Block Diagram
 
-![Image](/Images/Digi-Scale_bg.png)
+![Image](/Images/Architecture_Diagram.jpg)
 
 ### Hardware components
 
@@ -50,8 +50,8 @@ There are many observations in your day to day life that would tell you why this
 >2. Node-Red platform for dashboard server and MQTT subscriber
 >3. ESP32 Firmware that measures distance and send data to broker
 
-### System flow (ESP32 -> Dashboard)
-![Flow_diagram](/Images/Digi_Scale_Flow.png)
+### System flow (ESP32 -> Dashboard / Telegram bot)
+![Flow_diagram](/Images/Flow_Diagram.jpg)
 
 ## Bring-up Steps 
 
@@ -59,20 +59,31 @@ There are many observations in your day to day life that would tell you why this
 #### 1. **Install Platform IO IDE extention in VScode or used the Arduino IDE** - As this IDEs has the board libs and dependances.
 #### 2. **Install Node-Red SaaS platform** refer **[Steps](https://nodered.org/docs/getting-started/raspberrypi)** - On PI
 #### 3. **Install the MQTT broker** refer **[Steps](https://randomnerdtutorials.com/how-to-install-mosquitto-broker-on-raspberry-pi/)** - On PI
+#### 4. **Create the Telegram bot from [here](https://github.com/vyomchanpura/Remote_pi#creating-telegrambot)** follow all the steps mention in the link and you are ready with your bot
 
 ### ESP 32 FW Steps : 
 > #### The steps is same as Digital switch repo, please refer that steps [Here](https://github.com/vyomchanpura/Digital_Switch/blob/main/Bring_up_Doc/Digital_Switch_ESP32_FW_bringup.md#digital-switch---esp32-firmware), just take the source code for this project from [here](/Firmware/).
 
 ### Node-Red Setup on PI 
 #### 1. Install the Node-Red in PI as mentioned in Pre-requist steps
-#### 2. Open the web-interface of node-red for development in the browser
-#### 3. Install the UI-dashboard and MQTT pallet by going to the 3 line at right corner --> Manage pallete --> Install 
-#### 4. Import the flow file (download it from [here](Linkofnode-redflow)) of this project by going to 3 line at right corner --> import and select the flow file.
-#### 5. Deploy the flow by clicking the deploy button in the web-interface in the node-red server 
-#### 5. Open the dashboard UI with the URL : **<IPofnode-red_server>:port/ui** 
-#### 6. User can see the real-time distance of an object on to the dashboard.
- 
-#### So, now systems are up with FW in ESP32 board, MQTT broker and node-red server on PI. User can use this end-to-end faciality for various applications and use-cases.  
+#### 2. Open the web-interface of node-red for development in the browser by writing this address *http://nodeserver_ip:1880/*.
+#### 3. Install the [UI-dashboard nodes](https://github.com/vyomchanpura/Digital_Switch/blob/main/Bring_up_Doc/Digital_Switch_RaspberryPI_setup.md#node-red---dashboard) and [Telegram node](https://github.com/vyomchanpura/Digital_Switch/blob/main/Bring_up_Doc/Digital_Switch_RaspberryPI_setup.md#node-red---telegram) by going to the 3 line at right corner --> Manage pallete --> Install as mentioned in the Links.
+#### 5. Other nodes are already installed during Node-red installation.
+#### 4. Now import the flow file (download it from [here](/Node_red_flow/Water_level_node_red_flow_eg.json) of this project by going to 3 line at right corner --> import and select the flow file.
+![Import1](/Images/setting_node-red.png)
+![Import2](/Images/Import_filess.png)
+![Import3](/Images/Import.png)
+![Import4](/Images/Node_red_flow.png)
+#### 5. Change the config of MQTT nodes (add the broker username and password with broker IP) and also change the config of telegram bot by giving API token.
+#### 6. Deploy the flow by clicking the deploy button (Red button) in the web-interface in the node-red server. 
+#### 7. Open the dashboard UI with the URL : **<IPofnode-red_server>:port/ui** 
+#### 8. User can see the real-time distance of an object on to the dashboard.
+![Dashboard](/Images/Dashboard_data.png)
+
+#### 9. User can also ask for the real-time distance to telegram bot and bot will also gives alerts.
+![Telegram1](/Images/Telegram_bot_questions.png)
+![Telegram2](/Images/Telegram_bot_alerts.png)
+#### So, now systems are up with FW in ESP32 board, MQTT broker, telegram bot and node-red server on PI. User can use this end-to-end facality for various applications and use-cases.  
 
 ## Application / Use-cases
 ### Applications : 
