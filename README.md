@@ -73,8 +73,6 @@ Running MQTT broker on Windows if user does has Ubuntu or Raspbian based OS mach
 
 >*Note : User can run the broker via service as well in Windows like an Ubuntu/Rasbian OS but there is some issue while reading the password file due to permission so, user need to set the permisson properly.*   
 
-> Note : Make Sure MQTT broker is running in background either by service or normally by command before setting up the node-red
-
 #### 4. **Create the Telegram bot from [here](https://github.com/vyomchanpura/Remote_pi#creating-telegrambot)** follow all the steps mention in the link and you are ready with your bot
 
 ### ESP 32 FW Steps : 
